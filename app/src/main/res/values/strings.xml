@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Portfolio</string>
+
+    <string name="scrollview_and_relativelayout">ScrollView and RelativeLayout</string>
+    <string name="framelayout">FrameLayout</string>
+    <string name="spinner_array">Spinner Array</string>
+    <string name="spinnerTitle">My First Yaya!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

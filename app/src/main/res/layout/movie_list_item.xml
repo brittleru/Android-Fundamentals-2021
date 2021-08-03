@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:id="@+id/parentMovie"
+    android:layout_marginStart="50dp"
+    android:layout_marginTop="40dp"
+    android:layout_marginEnd="20dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/movieName"
+            android:text="Movie Name"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/releaseDate"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="2021"
+            android:gravity="center"
+            android:layout_below="@+id/movieName"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/overview"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:textStyle="italic"
+            android:text="The best movie evaar"
+            android:layout_below="@+id/releaseDate"
+            />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="450dp"
+            android:layout_below="@+id/overview"
+            android:id="@+id/movieImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_launcher_foreground"
+
+            />
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/linearChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scrollview_and_relativelayout"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearChild">
+
+            <View
+                android:id="@+id/orangeSquare"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/orange" />
+
+            <View
+                android:id="@+id/purpleRectangle"
+                android:layout_width="90dp"
+                android:layout_height="60dp"
+                android:layout_toEndOf="@+id/orangeSquare"
+                android:background="@color/purple_200"
+
+                />
+
+            <View
+                android:id="@+id/tealSquare200"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toEndOf="@+id/purpleRectangle"
+                android:background="@color/teal_200" />
+
+            <View
+                android:id="@+id/tealSquare700"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toEndOf="@+id/tealSquare200"
+                android:background="@color/teal_700" />
+
+            <View
+                android:id="@+id/purpleSquare500"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:background="@color/purple_500" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeChildText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeChild"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/textScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/anotherTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeChildText"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/framelayout"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/anotherTitle"
+            android:background="@color/purple">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:background="@color/light_teal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:layout_margin="60dp"
+                android:background="@color/yellow" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/spinnerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frameLayout"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/spinner_array"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+
+
+
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:prompt="@string/spinnerTitle"
+            android:layout_below="@id/spinnerTitle"
+            android:spinnerMode="dropdown"
+            style="@style/Widget.AppCompat.Spinner"
+            android:backgroundTint="@color/black"
+            android:backgroundTintMode="screen"
+            android:popupBackground="@color/blackish"
+            android:popupTheme="@color/blackish"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+
+            />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/spinner"
+            />
+
+    </RelativeLayout>
+
+
+</ScrollView>
