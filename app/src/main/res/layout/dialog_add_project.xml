@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addProjectTitle"
+        android:hint="Project Title"
+        android:padding="12dp"
+        android:lines="1"
+        android:gravity="top"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+
+        android:background="@android:drawable/editbox_background"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addProjectDescription"
+        android:hint="Project Description"
+        android:padding="12dp"
+        android:lines="2"
+        android:gravity="top"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+
+        android:background="@android:drawable/editbox_background"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addProjectTime"
+        android:hint="Project estimated time"
+        android:padding="12dp"
+        android:lines="1"
+        android:gravity="top"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+
+        android:background="@android:drawable/editbox_background"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/addProjectButton"
+            android:text="Add Project"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+
+            />
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancelProjectButton"
+            android:text="Cancel"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

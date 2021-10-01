@@ -7,7 +7,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:background="@color/purple_200"
-    tools:context=".MainFragment">
+    tools:context=".retrofitmovies.MainFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView

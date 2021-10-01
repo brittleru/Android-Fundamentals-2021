@@ -4,16 +4,18 @@ import android.content.Intent;
 
 public class ProjectCardView {
     private String projectName;
-    private String imageRes;
+    private int imageRes;
     private String projectDescription;
     private Intent buttonRedirect;
 
-    public ProjectCardView(String projectName, String imageRes, String projectDescription, Intent buttonRedirect) {
+    public ProjectCardView(String projectName, Intent buttonRedirect, String projectDescription, int imageRes) {
         this.projectName = projectName;
         this.imageRes = imageRes;
         this.projectDescription = projectDescription;
         this.buttonRedirect = buttonRedirect;
     }
+
+
 
     public String getProjectName() {
         return projectName;
@@ -23,11 +25,11 @@ public class ProjectCardView {
         this.projectName = projectName;
     }
 
-    public String getImageRes() {
+    public int getImageRes() {
         return imageRes;
     }
 
-    public void setImageRes(String imageRes) {
+    public void setImageRes(int imageRes) {
         this.imageRes = imageRes;
     }
 

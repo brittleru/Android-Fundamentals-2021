@@ -42,10 +42,7 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.ViewHo
         holder.buttonRedirect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//
-
                 context.startActivity(projectCardViews.get(position).getButtonRedirect());
-
             }
         });
         holder.projectText.setText(projectCardViews.get(position).getProjectDescription());

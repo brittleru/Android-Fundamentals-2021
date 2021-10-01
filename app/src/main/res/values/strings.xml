@@ -7,4 +7,103 @@
     <string name="spinnerTitle">My First Yaya!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="lorem">
+
+        "What is Lorem Ipsum?\n\n"
+
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\n\n"
+
+        "Where does it come from?\n\n"
+
+        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\n\n"
+        "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.\n\n\n"
+
+        "Why do we use it?\n\n"
+
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\n\n\n"
+
+        "Where can I get some?\n\n"
+        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.\n"
+
+
+
+    </string>
+
+
+    <string name="favFoodTitle">This is my Favourite Food</string>
+    <string name="favFoodText">So my favourite food is Profiterole with Raspberries </string>
+
+    <string name="favPetTitle">This is my Favourite Pet</string>
+    <string name="favPetText">I love Tigers I can\'t have one as a pet so my favourite pet is the fat cat</string>
+
+    <string name="favMovieTitle">This is my Favourite Movie</string>
+    <string name="favMovieText">My favourite movie is The Prestige</string>
+    <string name="title_activity_nav_drawer">NavDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+
+    <string name="fromTroubles">From now on, our troubles will be out of sight</string>
+    <string name="letHeart">Let your heart be light</string>
+    <string name="haveChristmas">Have yourself a merry little Christmas,</string>
+    <string name="sebastian">From Sebastian</string>
+    <string name="happyHoliday">Happy Holydays!</string>
+    <string name="spark">Sparkling</string>
+    <string name="yay">Happy Holiday!</string>
+    <string name="gingleButton">Gingles Bells</string>
+    <string name="snowButton">Let It Snow</string>
+
+    <string name="secret_text_2">Secret Text 2</string>
+    <string name="secret_text_1">Secret Text 1</string>
+    <string name="secret_text_3">Secret Text 3</string>
+    <string name="secretText">What does hide behind the buttons?</string>
+
+    <string name="favoriteQuote">“Let me tell you something you already know. The world ain\'t all sunshine and rainbows. It\'s a very mean and nasty place and I don\'t care how tough you are it will beat you to your knees and keep you there permanently if you let it. You, me, or nobody is gonna hit as hard as life. But it ain\'t about how hard ya hit. It\'s about how hard you can get hit and keep moving forward. How much you can take and keep moving forward. That\'s how winning is done!”</string>
+    <string name="favoriteQuoteAuthor">― Sylvester Stallone, Rocky Balboa</string>
+    <string name="favTitle">My favourite quote</string>
+
+    <string name="factTitle">A fact about me</string>
+    <string name="factText">Well I know it\'s not okay for the cats but I love fat cats.</string>
+    <string name="anotherFact">Also I love anything about AI and ML :D</string>
+
+    <string name="favoriteImgTitle">One of my favourite images</string>
+    <string name="credit">&#169; Idk it\'s from the internet :)</string>
+
+    <string name="open_website">Open Website</string>
+    <string name="websiteText">Enter the website you want to access</string>
+    <string name="title">Different Intent Redirects</string>
+    <string name="locationText">Enter the location you want to access</string>
+    <string name="open_location">Open Location</string>
+    <string name="shareText">Enter the text you want to share</string>
+    <string name="share_text">Share Text</string>
+    <string name="dialText">Dial the number you want to call</string>
+    <string name="call_number">Call Number</string>
+
+    <string name="another">Go to another activity</string>
+    <string name="title1">First Activity</string>
+    <string name="oncreate">onCreate():</string>
+    <string name="onstart">onStart():</string>
+    <string name="onresume">onResume():</string>
+    <string name="onpause">onPause():</string>
+    <string name="onstop">onStop():</string>
+    <string name="ondestroy">onDestroy():</string>
+    <string name="goFirst">Go back to first activity</string>
+    <string name="second">Second Activity</string>
+
+
+    <string name="message">Message...</string>
+    <string name="send">Send</string>
+
+    <string name="msgRec">Message Received</string>
+    <string name="rplRec">Reply Received</string>
 </resources>
