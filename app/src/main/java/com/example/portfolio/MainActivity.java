@@ -7,7 +7,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.RelativeLayout;
+import android.widget.SearchView;
 
 import com.example.portfolio.activitieschat.MessageSending;
 import com.example.portfolio.activitieslifecycle.FirstActivity;
@@ -36,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView projectsRecView;
     private RelativeLayout relativeLayout;
+    private ProjectsAdapter adapter;
+    private ArrayList<ProjectCardView> projectCardViews;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,44 +49,77 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        projectsRecView = findViewById(R.id.projectsRecycler);
-        ArrayList<ProjectCardView> projectCardViews = new ArrayList<>();
+        projectCardViews = new ArrayList<>();
+        generateData(projectCardViews);
+        makeProjectsRecView(projectCardViews);
 
 
-        Intent intent = new Intent(this, ViewsChallange.class);
-
-
-        projectCardViews.add(new ProjectCardView("ViewsChallenge", new Intent(MainActivity.this, ViewsChallange.class), "Description", R.mipmap.a));
-        projectCardViews.add(new ProjectCardView("ViewGroupsLogin", new Intent(MainActivity.this, ViewGroupsLogin.class), "Description", R.mipmap.b));
-        projectCardViews.add(new ProjectCardView("ViewsGroupsScrollArray", new Intent(MainActivity.this, ViewGroupsScrollArray.class), "Description", R.mipmap.c));
-
-        projectCardViews.add(new ProjectCardView("StylesCustomDateTimePicker", new Intent(MainActivity.this, CustomDateTimePicker.class), "Description", R.mipmap.m));
-        projectCardViews.add(new ProjectCardView("StylesCollapsingToolbar", new Intent(MainActivity.this, CollapsingToolbar.class), "Description", R.mipmap.q));
-        projectCardViews.add(new ProjectCardView("StylesCardViewHobby", new Intent(MainActivity.this, CardViewHobby.class), "Description", R.mipmap.k));
-        projectCardViews.add(new ProjectCardView("StylesBatteryControl", new Intent(MainActivity.this, StylesBatteryControl.class), "Description", R.mipmap.l));
-
-        projectCardViews.add(new ProjectCardView("StoreDataSharedPreferences", new Intent(MainActivity.this, SharedPreferences.class), "Description", R.mipmap.s));
-        projectCardViews.add(new ProjectCardView("StoreDataProjectManager", new Intent(MainActivity.this, ProjectManager.class), "Description", R.mipmap.r));
-
-        projectCardViews.add(new ProjectCardView("NetworkingRetrofitMovies", new Intent(MainActivity.this, NetworkingRetrofitMovies.class), "Description", R.mipmap.n));
-
-        projectCardViews.add(new ProjectCardView("FragmentsTabsApp", new Intent(MainActivity.this, TabsApp.class), "Description", R.mipmap.the_prestige));
-        projectCardViews.add(new ProjectCardView("FragmentsNavigationDrawer", new Intent(MainActivity.this, NavDrawer.class), "Description", R.mipmap.p));
-        projectCardViews.add(new ProjectCardView("FragmentSlides", new Intent(MainActivity.this, FragSlides.class), "Description", R.mipmap.j));
-
-        projectCardViews.add(new ProjectCardView("ComplexViewsStudents", new Intent(MainActivity.this, Students.class), "Description", R.mipmap.e));
-        projectCardViews.add(new ProjectCardView("ComplexViewsRecap", new Intent(MainActivity.this, Recap.class), "Description", R.mipmap.d));
-        projectCardViews.add(new ProjectCardView("ComplexViewsHolidayCard", new Intent(MainActivity.this, HolidayCard.class), "Description", R.mipmap.f));
-
-        projectCardViews.add(new ProjectCardView("ActivitiesAndIntentsSharedata", new Intent(MainActivity.this, Sharedata.class), "Description", R.mipmap.i));
-        projectCardViews.add(new ProjectCardView("ActivitiesAndIntentsPassageActivity", new Intent(MainActivity.this, PassageActivity.class), "Description", R.mipmap.h));
-        projectCardViews.add(new ProjectCardView("ActivitiesAndIntentsChatApp", new Intent(MainActivity.this, MessageSending.class), "Description", R.mipmap.o));
-        projectCardViews.add(new ProjectCardView("ActivitiesAndIntentsActivitiesLifecycle", new Intent(MainActivity.this, FirstActivity.class), "Description", R.mipmap.g));
-
-
-        ProjectsAdapter adapter = new ProjectsAdapter(this);
-        adapter.setProjectCardViews(projectCardViews);
-        projectsRecView.setAdapter(adapter);
-        projectsRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
+
+
+    private void makeProjectsRecView(ArrayList<ProjectCardView> projectCardViews) {
+        projectsRecView = findViewById(R.id.projectsRecycler);
+        projectsRecView.setHasFixedSize(true);
+
+        adapter = new ProjectsAdapter(this, projectCardViews);
+        adapter.setProjectCardViews(projectCardViews);
+        projectsRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        projectsRecView.setAdapter(adapter);
+    }
+
+    private void generateData(ArrayList<ProjectCardView> projectCardViews) {
+        projectCardViews.add(new ProjectCardView("ViewsChallenge", new Intent(MainActivity.this, ViewsChallange.class), getResources().getString(R.string.viewsChallengeDesc), R.mipmap.a));
+        projectCardViews.add(new ProjectCardView("ViewGroupsLogin", new Intent(MainActivity.this, ViewGroupsLogin.class), getResources().getString(R.string.viewGroupsLoginDesc), R.mipmap.b));
+        projectCardViews.add(new ProjectCardView("ViewsGroupsScrollArray", new Intent(MainActivity.this, ViewGroupsScrollArray.class), getResources().getString(R.string.viewsGroupsScrollArrayDesc), R.mipmap.c));
+
+        projectCardViews.add(new ProjectCardView("StylesCustomDateTimePicker", new Intent(MainActivity.this, CustomDateTimePicker.class), getResources().getString(R.string.stylesCustomDateTimePickerDesc), R.mipmap.m));
+        projectCardViews.add(new ProjectCardView("StylesCollapsingToolbar", new Intent(MainActivity.this, CollapsingToolbar.class), getResources().getString(R.string.stylesCollapsingToolbarDesc), R.mipmap.q));
+        projectCardViews.add(new ProjectCardView("StylesCardViewHobby", new Intent(MainActivity.this, CardViewHobby.class), getResources().getString(R.string.stylesCardViewHobbyDesc), R.mipmap.k));
+        projectCardViews.add(new ProjectCardView("StylesBatteryControl", new Intent(MainActivity.this, StylesBatteryControl.class), getResources().getString(R.string.stylesBatteryControlDesc), R.mipmap.l));
+
+        projectCardViews.add(new ProjectCardView("StoreDataSharedPreferences", new Intent(MainActivity.this, SharedPreferences.class), getResources().getString(R.string.storeDataSharedPreferencesDesc), R.mipmap.s));
+        projectCardViews.add(new ProjectCardView("StoreDataProjectManager", new Intent(MainActivity.this, ProjectManager.class), getResources().getString(R.string.storeDataProjectManagerDesc), R.mipmap.r));
+
+        projectCardViews.add(new ProjectCardView("NetworkingRetrofitMovies", new Intent(MainActivity.this, NetworkingRetrofitMovies.class), getResources().getString(R.string.networkingRetrofitMoviesDesc), R.mipmap.n));
+
+        projectCardViews.add(new ProjectCardView("FragmentsTabsApp", new Intent(MainActivity.this, TabsApp.class), getResources().getString(R.string.fragmentsTabsAppDesc), R.mipmap.the_prestige));
+        projectCardViews.add(new ProjectCardView("FragmentsNavigationDrawer", new Intent(MainActivity.this, NavDrawer.class), getResources().getString(R.string.fragmentsNavigationDrawerDesc), R.mipmap.p));
+//        projectCardViews.add(new ProjectCardView("FragmentSlides", new Intent(MainActivity.this, FragSlides.class), getResources().getString(R.string.fragmentSlidesDesc), R.mipmap.j));
+
+        projectCardViews.add(new ProjectCardView("ComplexViewsStudents", new Intent(MainActivity.this, Students.class), getResources().getString(R.string.complexViewsStudentsDesc), R.mipmap.e));
+        projectCardViews.add(new ProjectCardView("ComplexViewsRecap", new Intent(MainActivity.this, Recap.class), getResources().getString(R.string.complexViewsRecapDesc), R.mipmap.d));
+        projectCardViews.add(new ProjectCardView("ComplexViewsHolidayCard", new Intent(MainActivity.this, HolidayCard.class), getResources().getString(R.string.complexViewsHolidayCardDesc), R.mipmap.f));
+
+        projectCardViews.add(new ProjectCardView("ActivitiesAndIntentsSharedata", new Intent(MainActivity.this, Sharedata.class), getResources().getString(R.string.activitiesAndIntentsSharedataDesc), R.mipmap.i));
+        projectCardViews.add(new ProjectCardView("ActivitiesAndIntentsPassageActivity", new Intent(MainActivity.this, PassageActivity.class), getResources().getString(R.string.activitiesAndIntentsPassageActivityDesc), R.mipmap.h));
+        projectCardViews.add(new ProjectCardView("ActivitiesAndIntentsChatApp", new Intent(MainActivity.this, MessageSending.class), getResources().getString(R.string.activitiesAndIntentsChatAppDesc), R.mipmap.o));
+        projectCardViews.add(new ProjectCardView("ActivitiesAndIntentsActivitiesLifecycle", new Intent(MainActivity.this, FirstActivity.class), getResources().getString(R.string.activitiesAndIntentsActivitiesLifecycleDesc), R.mipmap.g));
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.projects_menu, menu);
+        MenuItem searchItem = menu.findItem(R.id.search_projects);
+
+        SearchView searchView = (SearchView) searchItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+
+                return false;
+            }
+        });
+
+        return true;
+    }
+
+
 }

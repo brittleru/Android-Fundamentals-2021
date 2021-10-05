@@ -8,6 +8,8 @@ public class ProjectCardView {
     private String projectDescription;
     private Intent buttonRedirect;
 
+
+
     public ProjectCardView(String projectName, Intent buttonRedirect, String projectDescription, int imageRes) {
         this.projectName = projectName;
         this.imageRes = imageRes;

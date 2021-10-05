@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/appBarLayout"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
         >
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -33,7 +34,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
-                />
+                app:layout_collapseMode="pin"
+                >
+
+
+            </androidx.appcompat.widget.Toolbar>
+
 
 
 
@@ -44,11 +50,12 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/ic_fab_add"
         android:tint="@android:color/white"
         app:layout_anchor="@id/appBarLayout"
         app:layout_anchorGravity="bottom|right|end"
         android:layout_marginEnd="30dp"
+        android:id="@+id/collapsing_button"
         />
 
     <androidx.core.widget.NestedScrollView
@@ -62,6 +69,7 @@
             android:layout_height="match_parent"
             android:id="@+id/projectsRecycler"
             tools:listitem="@layout/projects_list_item"
+            android:scrollbars="vertical"
             />
 
     </androidx.core.widget.NestedScrollView>

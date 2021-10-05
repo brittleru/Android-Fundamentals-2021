@@ -35,15 +35,7 @@
             android:textSize="18sp"
             />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/projectButton"
-            android:layout_below="@+id/projectName"
-            android:layout_centerHorizontal="true"
-            android:text="Check it OuT!"
-            android:textStyle="bold"
-            />
+
 
         <TextView
             android:layout_width="280dp"
@@ -52,21 +44,64 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
             android:textStyle="italic"
             android:text="Awesome description"
-            android:layout_below="@+id/projectButton"
+            android:layout_below="@+id/projectName"
+            android:maxLines="5"
             />
 
         <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/showText"
+            android:layout_below="@id/projectText"
+            android:clickable="true"
+            android:src="@drawable/ic_arrow_down"
+            android:focusable="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:layout_marginBottom="10dp"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/hideText"
+            android:layout_below="@id/projectText"
+            android:clickable="true"
+            android:visibility="invisible"
+            android:src="@drawable/ic_arrow_up"
+            android:focusable="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            />
+
+
+
+        <ImageView
             android:layout_width="300dp"
-            android:layout_height="450dp"
-            android:layout_below="@+id/projectText"
+            android:layout_height="300dp"
+            android:layout_below="@+id/hideText"
             android:id="@+id/projectImage"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+
+            android:layout_marginBottom="10dp"
             android:src="@drawable/ic_launcher_foreground"
 
             tools:ignore="UnknownIdInLayout" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/projectButton"
+            android:layout_below="@+id/projectImage"
+            android:layout_centerHorizontal="true"
+            android:text="Check it OuT!"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            />
 
 
 
